@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franja Morada - Ya estás un paso más cerca</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Bebas Neue para tipografía condensada de Franja Morada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color morado/borgoña exacto extraído de la marca */
+            --brand-burgundy: #520D23;
+            /* Fondo claro #F3F5F7 */
+            --brand-bg: #F3F5F7;
+        }
+
+        body {
+            background-color: var(--brand-bg);
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
+        }
+
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .text-burgundy {
+            color: var(--brand-burgundy);
+        }
+
+        /* Animación suave de entrada al cargar la página */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#520D23] selection:text-white">
+
+    <!-- 1. Banner Superior Estático -->
+    <header class="w-full bg-[#F3F5F7] border-b border-gray-200/80 px-6 py-5 md:px-12">
+        <div class="max-w-7xl mx-auto flex items-center justify-start">
+            <h1 class="font-bebas text-3xl sm:text-4xl text-burgundy tracking-wider select-none">
+                FRANJA MORADA
+            </h1>
+        </div>
+    </header>
+
+    <!-- 2. Contenido Principal Centrado -->
+    <main class="flex-grow flex items-center justify-center p-6 sm:p-12">
+        <div class="w-full max-w-3xl mx-auto text-center animate-fade-in flex flex-col items-center justify-center space-y-8">
+            
+            <!-- Título Grande Central -->
+            <h2 class="font-bebas text-5xl sm:text-7xl md:text-8xl text-burgundy leading-none tracking-tight select-none">
+                YA ESTÁS UN PASO MÁS CERCA
+            </h2>
+
+            <!-- 
+                ===================================================================
+                3. ESPACIO INVISIBLE PARA LA IMAGEN PNG
+                
+                Instrucciones:
+                Reemplaza la URL 'LINK_DE_TU_IMAGEN_AQUI.png' dentro de src="..."
+                por la dirección pública o ruta local de tu imagen PNG.
+                ===================================================================
+            -->
+            <div class="w-full max-w-md min-h-[150px] flex items-center justify-center">
+                <img 
+                    id="mi-imagen-png" 
+                    src="LINK_DE_TU_IMAGEN_AQUI.png" 
+                    alt="Imagen Franja Morada" 
+                    class="max-w-full h-auto object-contain mx-auto border-none shadow-none outline-none"
+                    onerror="this.style.display='none'"
+                    onload="this.style.display='block'"
+                />
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Pie de página discreto -->
+    <footer class="w-full py-4 text-center text-xs text-gray-400 bg-[#F3F5F7]">
+        <p>© Franja Morada</p>
+    </footer>
+
+</body>
+</html>
